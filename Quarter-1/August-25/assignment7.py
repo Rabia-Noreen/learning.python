@@ -29,7 +29,6 @@ if total <= 1:
                 print(f"{total} is not a prime number")
 total = 10
 is_prime(total)
-# Define the is_prime function BEFORE calling it
 def is_prime(n):
     if n <= 1:
         print(f"{n} is not a prime number")
@@ -38,35 +37,15 @@ def is_prime(n):
         print(f"{n} is a prime number")
         return True
     else:
-        for i in range(2, int(n**0.5) + 1):  # Only check up to the square root of n for efficiency
+        for i in range(2, n):
             if n % i == 0:
                 print(f"{n} is not a prime number")
                 return False
         print(f"{n} is a prime number")
         return True
 
-# Example input and process
-total = 10  # Example value
-
-# Call the is_prime function
-is_prime(total)
-numbers = []
-for i in range(1, 4):
-    num = int(input(f"Enter your {i} favourite number: "))
-    numbers.append(num)
-
-print("Your favourite numbers are:", numbers)
-for num in numbers:
-    if num % 2 == 0:
-        print(f"The number {num} is even")
-    else:
-        print(f"The number {num} is odd")
-num_tuple = tuple(numbers)
-for num in numbers:
-    print(f"Here is the number and its square: {num} and {num**2}")
-total = 0
-for num in numbers:
-    total += num
-    print(f"Here is the sum of your favourite numbers: {total}")
+total = 10
 is_prime(total)
 
+                
+                
